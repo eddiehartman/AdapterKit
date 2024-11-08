@@ -1,0 +1,27 @@
+##{PropertiesConnector} savedBy=Administrator, saveDate=Fri Jul 07 13:12:23 CEST 2017
+adapter.category=application
+adapter.config=TutProfile.xml
+adapter.description=Tutorial Adapter Profile
+adapter.destination.folder=ISIM _ IIM _ Identity Manager/adapters/TutProfile
+adapter.name=TutProfile
+adapter.source.folder=ISIM _ IIM _ Identity Manager/adapters/TutProfile/
+adapter.type=igi
+adapter.version=1.0
+al.add=
+al.changePassword=
+al.delete=
+al.modify=
+al.restore=
+al.search=ReconcileAccounts;Search AL used for reconciliation
+al.suspend=
+al.test=TestConnection;AL used to test connectivity
+attribute.erTPCN=Common Name; multivalued; string
+{protect}-attribute.erTPGivenName={encr}QFNkYhuFuZDR3809ij4KA0NVXspIfWUozwIqKaRG0AqQ4jXHDLYfKbF+Gkma/FzD5Z7KELeONiQa6wgQerglLc7LwcShBI8LheiYhpyOuL+JRK+tyIrtNix04lIr434ayQDgnelDGMjLOaaa+etocPtUmg9Da5vmX+NohltP27sB8lvUxnEh/AL0Cay3+EqHLRyCdE8gUO3itzBbRV1ybtZqlFu+k0TCcnUnqf8GjqFTZ5vGHADrDla6P4UL6SYKTrFRLSzfR58nugWdnsX+U08xFzKUkU1dSeDBKB7YP7GF4XFwQNX4Vyzg+2ZgWjriv0fS1Cfie1Mkgy/EVyr0dw==
+attribute.erTPGroup=Member of groups; multivalued; string; membership
+attribute.erTPGroupMember=Group members; multi; string
+attribute.erTPGroupName=Group name; string
+attribute.erTPSN=Surname; string
+attribute.erTPTitle=Title; string
+class.group.erTPGroupAccount=Class representing TutProfile group; erTPGroupName(requred); erTPGroupMember
+class.service.erTPService=Class representing a Tutorial Profile service
+class.user.erTPUserAccount=Class representing TutProfile account; eruid(required); erpassword; erTPCN(required); erTPSN(required); erTPGivenName; erTPTitle; erTPGroup

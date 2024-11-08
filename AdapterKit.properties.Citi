@@ -1,0 +1,51 @@
+##{PropertiesConnector} savedBy=Administrator, saveDate=Wed Apr 26 08:15:08 CEST 2017
+## Name of the Adapter
+adapter.name=citiRacfProfile
+## Name of input Config file
+adapter.config.name=citiRacfProfile.xml
+## Source folder is where your Config xml is
+adapter.source.folder=workspace711/citiRacfProfile/Runtime-citiRacfProfile/
+## Destination folder is where the AL writes its files
+adapter.destination.folder=ISIM _ IIM _ Identity Manager/adapters/citiRacfProfile/
+## Operations - internal op name=<AL name>;<description>
+al.add=racfAdd
+al.changePassword=
+al.delete=
+al.modify=racfModify
+al.restore=
+al.search=racfSearch;Search AL used for reconciliation
+al.suspend=
+al.test=racfTest;AL used to test connectivity
+## Attributes - attribute.<name>=<description>{;multivalued}{;<type>}{;membership}
+## 				types are listed below. If not specified, default is 'string'
+## 				membership indicates this attribute has groups the user/acct is member of
+attribute.erRacfProfile_racfid=Member of groups; multivalued; string; membership
+attribute.erRacfProfile_racfattributes=Info on account; multivalued; string
+attribute.erRacfProfile_racfauthorizationdate=Date the account was authorized; string
+attribute.erRacfProfile_racfconnectgroupname=multivalued; string; membership
+attribute.erRacfProfile_racfctlkeyword=Access setting; string
+attribute.erRacfProfile_racfdefaultgroup=Default group; multivalued; string; membership
+attribute.erRacfProfile_racfomvshome=Home directory; string
+attribute.erRacfProfile_racfomvsinitialprogram=Shell; string
+attribute.erRacfProfile_racfomvsuid=UID value; string
+attribute.erRacfProfile_racfowner=Owner; string
+attribute.erRacfProfile_racfprogrammername=Programmer name; string
+attribute.erRacfProfile_safaccountnumber=SAF Account Number; string
+attribute.erRacfProfile_safdefaultloginproc=SAF default shell; string
+attribute.erRacfProfile_safdefaultunit=SAF default unit; string
+attribute.erRacfProfile_safholdclass=SAF hold class; string
+attribute.erRacfProfile_safjobclass=SAF job class; string
+attribute.erRacfProfile_saflogonsize=SAF logon size; number
+attribute.erRacfProfile_safmaximumregionsize=SAF max region size; number
+attribute.erRacfProfile_safuserdata=SAF user data; number
+## Classes - class.<className>=<description>;<attribute names>
+##                 <attribute names> is semicolon separated list
+##                 each name can be followed optionally by (required) or (req) or (r) for required atts
+#class.group.erCitiRacfProfileGroupAccount=Class representing RACF group; erTutProfileGroupName(requred); erTutProfileGroupMember
+class.service.erCitiRacfProfileService=Class representing a RACF Profile service
+class.user.erCitiRacfProfileUserAccount=Class representing RACF account; erRacfProfile_racfid(required), erRacfProfile_racfattributes, erRacfProfile_racfauthorizationdate, erRacfProfile_racfconnectgroupname, erRacfProfile_racfctlkeyword, erRacfProfile_racfdefaultgroup, erRacfProfile_racfomvshome, erRacfProfile_racfomvsinitialprogram, erRacfProfile_racfomvsuid, erRacfProfile_racfowner, erRacfProfile_racfprogrammername, erRacfProfile_safaccountnumber, erRacfProfile_safdefaultloginproc, erRacfProfile_safdefaultunit, erRacfProfile_safholdclass, erRacfProfile_safjobclass, erRacfProfile_saflogonsize, erRacfProfile_safmaximumregionsize, erRacfProfile_safuserdata,
+adapter.category=application
+adapter.version=1.0
+property.test=Test property value
+adapter.description=Citi RACF Adapter Profile
+adapter.type=igi
